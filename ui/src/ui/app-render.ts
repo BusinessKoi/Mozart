@@ -87,7 +87,7 @@ import { renderNodes } from "./views/nodes";
 import { renderOverview } from "./views/overview";
 import { renderSessions } from "./views/sessions";
 import { renderSkills } from "./views/skills";
-import { renderQuentin } from "./views/quentin";
+import { renderSymphony } from "./views/symphony";
 
 const AVATAR_DATA_RE = /^data:/i;
 const AVATAR_HTTP_RE = /^https?:\/\//i;
@@ -356,8 +356,8 @@ export function renderApp(state: AppViewState) {
       : nothing
     }
 
-        ${state.tab === "quentin"
-      ? renderQuentin()
+        ${state.tab === "symphony"
+      ? renderSymphony()
       : nothing
     }
 
