@@ -37,4 +37,5 @@ export class Logger {
     }
 }
 
+export const createLogger = (level?: LogLevel) => new Logger(level || 'INFO');
 export const logger = new Logger(process.env.LOG_LEVEL as LogLevel || 'INFO');

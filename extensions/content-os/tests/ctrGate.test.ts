@@ -17,7 +17,8 @@ test('CTR Gate', async () => {
         }
     } as ShootBrief;
 
-    const reportGood = runCtrGate(goodBrief);
+    const mockCfg = { ctr_gate: { keyword_overlap_threshold: 0.5 } };
+    const reportGood = runCtrGate(mockCfg, goodBrief, 'test_out');
     assert.ok(reportGood.pass, 'Good brief should pass');
     assert.ok(reportGood.confidence_score > 80);
 
@@ -34,7 +35,7 @@ test('CTR Gate', async () => {
         }
     } as ShootBrief;
 
-    const reportBad = runCtrGate(badBrief);
+    const reportBad = runCtrGate(mockCfg, badBrief, 'test_out');
     assert.equal(reportBad.pass, false, 'Bad brief should fail');
     assert.ok(reportBad.fixes, 'Should provide fixes');
 });
