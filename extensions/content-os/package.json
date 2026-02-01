@@ -1,0 +1,22 @@
+{
+  "name": "@mozart/content-os",
+  "version": "2026.2.1",
+  "description": "Mozart Content Operating System: Intent Engine & CTR Gates",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test dist/tests/*.test.js",
+    "cli": "node dist/cli.js",
+    "verify": "node scripts/verify.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "mozart": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  }
+}

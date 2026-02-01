@@ -1,0 +1,32 @@
+general:
+  timezone: "America/New_York"
+  log_level: "INFO"
+
+paths:
+  outputs_dir: "outputs"
+  deals_path: "deals.json"
+
+calendar:
+  mode: "ics" # "ics" | "google"
+  ics_path: "calendar.ics"
+
+  google:
+    mock: true
+    mock_events_path: "mock_calendar_events.json"
+    calendar_id: ""
+    credentials_path: ""
+    token_path: ""
+
+ctr_gate:
+  keyword_overlap_threshold: 0.25
+
+notify:
+  slack_webhook_url: ""
+  smtp:
+    host: ""
+    port: 587
+    username: ""
+    password: ""
+    from_addr: ""
+    to_addr: ""
+    use_tls: true
